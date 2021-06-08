@@ -1,20 +1,20 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-    name: html-pv0
+    name: html-pvc
     labels:
-        name: html-pv0
+        name: html-pvc
 spec:
     accessModes:
         - ReadWriteOnce
     resources:
         requests:
-            storage: 100Mi
+            storage: 500Mi
 ---
 apiVersion: v1
 kind: Pod
 metadata:
-    name: html-pod-pv0
+    name: html-pod
     labels:
         env: testing
         region: IN
@@ -34,7 +34,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata: 
-  name: html-svc0
+  name: html-svc
   labels:
     app: html
 spec:
