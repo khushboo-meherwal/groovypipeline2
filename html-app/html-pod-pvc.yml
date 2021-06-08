@@ -10,6 +10,7 @@ spec:
     resources:
         requests:
             storage: 500Mi
+    volumeName: html-pv
 ---
 apiVersion: v1
 kind: Pod
@@ -33,7 +34,7 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-metadata: 
+metadata:
   name: html-svc
   labels:
     app: html
